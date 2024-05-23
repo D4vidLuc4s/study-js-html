@@ -11,15 +11,22 @@
 
     var choosedNumber = Math.round(Math.random() * 10);
     var points = 1
+    var attempts = 0;
 
     while (points <= 3) {
         var guess = parseInt(prompt("Tente adivinhar o numero: "));
 
         if (guess === choosedNumber) {
-            show("Você acertou o número!");
+            attempts++
+            show("Você acertou o número que eu estava pensando na " + attempts + "ª tentativa!<br>");
+            show("O número era " + choosedNumber);
             break;
         } else {
-            show("Voce errou!");
+            attempts++
+            show("Voce errou a " + attempts + "ª tentativa");
+            if (points >= 3) {
+                show("O número correto era " + choosedNumber);
+            }
         }
         points++
     }
