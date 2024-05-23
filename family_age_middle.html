@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    var numberFamily = parseInt(prompt("Informe quantas pessoas tem na sua familia: "));
+    var people = 0;
+    var ageTotal = 0;
+
+    while (people < numberFamily) {
+        var age = parseInt(prompt("Informe a idade do familiar: "));
+        ageTotal = ageTotal + age;
+        people++;
+    }
+    var averageAge = ageTotal / numberFamily;
+    show("A média das idades da sua familia é de " + averageAge + " anos");
+
+
+</script>

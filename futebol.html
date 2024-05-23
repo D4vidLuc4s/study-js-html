@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    var wins = parseInt(prompt("Informe quantas vitorias o seu time teve:"));
+    var draws = parseInt(prompt("Informe quantos empates o seu time teve:"));
+
+    var points = wins * 3 + draws;
+
+    show("Seu time fez " + points + " pontos");
+
+    if (points > 28) {
+        show("Seu time está melhor que ano passado");
+    } if (points < 28) {
+        show("Seu time está pior que ano passado");
+    } if (points === 28) {
+        show("Seu time está igual que ano passado");
+    }
+
+</script>

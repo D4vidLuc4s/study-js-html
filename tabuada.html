@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    var multi = 1;
+    var value = parseInt(prompt("Informe um número e sera gerado a tabuada dele: "))
+
+    for(var multi = 1; multi <= 10; multi++) {
+        var calc = value * multi;
+        show(value + " X " + multi + " = " + calc);
+    }
+
+</script>

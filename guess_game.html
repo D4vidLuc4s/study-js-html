@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    var choosedNumber = Math.round(Math.random() * 10);
+    var points = 1
+
+    while (points <= 3) {
+        var guess = parseInt(prompt("Tente adivinhar o numero: "));
+
+        if (guess === choosedNumber) {
+            show("Você acertou o número!");
+            break;
+        } else {
+            show("Voce errou!");
+        }
+        points++
+    }
+</script>

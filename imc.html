@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    function calcImc(weight, height) {
+        return weight / (height * height);
+    }
+
+    var name = prompt("Qual o seu nome?")
+    var height = prompt("Qual sua altura?");
+    var weight = prompt("Qual seu peso?");
+    var imc = calcImc(weight, height);
+
+    show("O IMC de " + name + " é " + imc);
+
+    if (imc < 18.5) {
+        show("Seu IMC está abaixo de 18.5. Você está abaixo do peso");
+    }
+    if (imc >= 18.5 && imc <= 24.9) {
+        show("Seu IMC está entre 18.5 e 24.9. Você está no peso normal");
+    }
+    if (imc >= 25 && imc <= 29.9) {
+        show("Seu IMC está entre 25 e 29.9. Você está com sobrepeso");
+    }
+    if (imc >= 30 && imc <= 39.9) {
+        show("Seu IMC está entre 30 e 39.9. Você está com obesidade");
+    }
+    if (imc >= 40) {
+        show("Seu IMC é igual ou maior que 40. Você está com obesidade grave");
+    }
+
+
+</script>

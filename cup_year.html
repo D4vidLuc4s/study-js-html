@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine() {
+        document.write("<br>");
+    }
+    function show(phrase) {
+        document.write(phrase);
+        skipLine();
+    }
+
+    var currentYear = new Date().getFullYear();
+    var cupYear = 1930;
+
+    while(cupYear <= currentYear) {
+        if (cupYear === 1942 || cupYear === 1946) {
+            show("Não teve copa em " + cupYear);
+        } else {
+            show("Teve copa em " + cupYear);
+        }
+        cupYear = cupYear + 4;
+    }
+</script>
